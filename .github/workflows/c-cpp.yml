@@ -13,5 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build
-      run: make build
+    - name: cmake build 
+      run: mkdir build && cd build && cmake ..
+
+    - name: make main
+      run: cd build && make
+    
+    - name: run tests
+      run: make test
