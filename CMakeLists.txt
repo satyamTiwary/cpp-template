@@ -1,14 +1,12 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.15)
 
-project(App)
+project(templateProject CXX)
 
-set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
-set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+option(BUILD_SHARED_LIBS "Enable compilation of shared libraries" OFF)
+option(ENABLE_TESTING "Enable Test Builds" ON)
+option(ENABLE_FUZZING "Enable Fuzzing Builds" OFF)
+option(ENABLE_PCH "Enable Precompiled Headers" OFF) # Very basic PCH example
 
-include_directories("${PROJECT_SOURCE_DIR}/Product/include")
+include(cmake/TopLevelCMake.cmake)
 
-add_library(Class Product/src/class.cpp)
-add_executable(App test.cpp)
-
-target_link_libraries(App PRIVATE Class)
+add_subdirectory(src)
