@@ -50,3 +50,5 @@ catch_discover_tests(
   -s
   --reporter=xml
   --out=relaxed_constexpr.xml)
+
+add_subdirectory(Driver)
