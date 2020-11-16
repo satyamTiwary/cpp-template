@@ -1,5 +1,5 @@
-option(CPP_STARTER_USE_QT "Enable compilation of QT sample" OFF)
-option(CPP_STARTER_USE_IMGUI "Enable compilation of ImGui sample" OFF)
+# option(CPP_STARTER_USE_QT "Enable compilation of QT sample" OFF)
+# option(CPP_STARTER_USE_IMGUI "Enable compilation of ImGui sample" OFF)
 
 # # qt
 # if(CPP_STARTER_USE_QT)
