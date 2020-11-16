@@ -1,6 +1,6 @@
 # Essential
 # sudo apt-get update
-sudo apt install build-essential clang-11 clang-tidy ccache 
+sudo apt install build-essential clang-11 clang-tidy ccache clang-format
 
 # Cpp
 sudo apt-get install mosquitto python3 python3-pip cmake cppcheck 
@@ -12,6 +12,6 @@ sudo ln -s ~/.local/bin/conan /usr/local/bin/conan
 # Optional dependencies
 pip3 install setuptools
 pip3 install wheel
-pip3 install conan clang-format
+pip3 install conan
 
 sudo apt-get install doxygen graphviz

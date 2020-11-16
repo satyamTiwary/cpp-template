@@ -1,11 +1,10 @@
 #include <string>
 
-struct gpio
-{
-    gpio(): name("uninitialized"), state(0) {}
-    
-    std::string name;
-    int state;
+struct gpio {
+  gpio() : name("uninitialized"), state(0) {}
 
-    std::string str() const;
+  std::string name;
+  int state;
+
+  std::string str() const;
 };

@@ -5,8 +5,7 @@
 
 #include "Driver/gpio.h"
 
-int main()
-{
+int main() {
   gpio g1;
   spdlog::info("object: {}", g1.str());
 }
