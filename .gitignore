@@ -2,3 +2,7 @@ bin
 build
 .vscode
 .cache
+
+*.srctrlbm
+*.srctrldb
+*.srctrlprj
