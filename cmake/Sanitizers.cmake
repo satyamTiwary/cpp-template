@@ -1,10 +1,10 @@
-function(enable_sanitizers project_name)
+function(enable_sanitizers templateProject)
 
   if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
 
     if(ENABLE_COVERAGE)
-      target_compile_options(${project_name} INTERFACE --coverage -O0 -g)
-      target_link_libraries(${project_name} INTERFACE --coverage)
+      target_compile_options(${templateProject} INTERFACE --coverage -O0 -g)
+      target_link_libraries(${templateProject} INTERFACE --coverage)
     endif()
 
     set(SANITIZERS "")
@@ -52,8 +52,8 @@ function(enable_sanitizers project_name)
        "${LIST_OF_SANITIZERS}"
        STREQUAL
        "")
-      target_compile_options(${project_name} INTERFACE -fsanitize=${LIST_OF_SANITIZERS})
-      target_link_libraries(${project_name} INTERFACE -fsanitize=${LIST_OF_SANITIZERS})
+      target_compile_options(${templateProject} INTERFACE -fsanitize=${LIST_OF_SANITIZERS})
+      target_link_libraries(${templateProject} INTERFACE -fsanitize=${LIST_OF_SANITIZERS})
     endif()
   endif()
 
