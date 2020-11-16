@@ -5,4 +5,5 @@ sudo apt install build-essential clang-11 clang-tidy ccache
 # Cpp
 sudo apt-get install python3-pip cmake cppcheck doxygen graphviz
 pip3 install setuptools
+pip3 install wheel
 pip3 install conan clang-format
